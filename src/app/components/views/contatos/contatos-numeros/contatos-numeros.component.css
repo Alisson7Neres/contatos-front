@@ -1,0 +1,13 @@
+
+table {
+    width: 100%;
+}
+.edit {
+    color: yellowgreen;
+    cursor: pointer;
+}
+.delete {
+    color: red;
+    padding: 2rem;
+    cursor: pointer;
+}
