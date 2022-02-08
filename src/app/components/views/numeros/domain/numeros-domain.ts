@@ -1,4 +1,4 @@
-export interface Numeros {
+export interface NumerosDomain {
 
     id: Number,
     numero: String
