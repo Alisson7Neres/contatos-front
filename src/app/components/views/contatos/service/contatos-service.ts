@@ -18,8 +18,18 @@ export class ContatosService {
     return this.http.get(url);
   }
 
+  findById(id : String) : Observable<ContatosDomain> {
+    const url = `${this.urlAPI}contatos/${id}`
+    return this.http.get<ContatosDomain>(url);
+  }
+
   create(contatos : ContatosDomain) : Observable<any> {
     const url = `${this.urlAPI}contatos/`
-    return this.http.post(url,contatos)
+    return this.http.post(url,contatos);
+  }
+
+  update(contatos : ContatosDomain) : Observable<any> {
+    const url = `${this.urlAPI}contatos/${contatos.id}`
+    return this.http.put(url, contatos);
   }
 }

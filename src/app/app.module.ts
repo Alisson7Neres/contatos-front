@@ -22,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ContatosNumerosComponent } from './components/views/contatos/contatos-numeros/contatos-numeros.component';
 import { HomeComponent } from './components/views/contatos/home/home.component';
 import { ContatosCreateComponent } from './components/views/contatos/contatos-create/contatos-create.component';
+import { ContatosUpdateComponent } from './components/views/contatos/contatos-update/contatos-update.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ContatosCreateComponent } from './components/views/contatos/contatos-cr
     ContatosNumerosComponent,
     HomeComponent,
     ContatosCreateComponent,
+    ContatosUpdateComponent,
   ],
   imports: [
     BrowserModule,

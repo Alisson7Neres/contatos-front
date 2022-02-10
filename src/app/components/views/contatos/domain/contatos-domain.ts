@@ -1,6 +1,6 @@
 export interface ContatosDomain {
 
-    id: Number,
+    id: String,
     nome: String,
     sobrenome: String,
     email: String
