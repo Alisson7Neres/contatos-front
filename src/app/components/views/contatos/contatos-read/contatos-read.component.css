@@ -4,17 +4,15 @@
 
 .edit {
     color: yellowgreen;
-    cursor: pointer;
 }
 
 .delete {
     color: red;
-    cursor: pointer;
 }
 
 a {
     padding : 7px;
 }
-.phone {
+i {
     cursor: pointer;
 }

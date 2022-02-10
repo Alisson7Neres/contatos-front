@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,11 +13,15 @@ import { ContatosReadComponent } from './components/views/contatos/contatos-read
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table'
 import { MatIconModule } from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 import { ContatosNumerosComponent } from './components/views/contatos/contatos-numeros/contatos-numeros.component';
 import { HomeComponent } from './components/views/contatos/home/home.component';
+import { ContatosCreateComponent } from './components/views/contatos/contatos-create/contatos-create.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,7 @@ import { HomeComponent } from './components/views/contatos/home/home.component';
     ContatosReadComponent,
     ContatosNumerosComponent,
     HomeComponent,
+    ContatosCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,8 +41,11 @@ import { HomeComponent } from './components/views/contatos/home/home.component';
     MatToolbarModule,
     MatTableModule,
     MatIconModule,
-    MatCardModule
-    
+    MatCardModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,4 +17,9 @@ export class NumerosService {
     const url = `${this.urlAPI}numeros/?contatos=${contatos_join}`
     return this.http.get<NumerosDomain[]>(url)
   }
+
+  create(numeros : NumerosDomain, contatos_join : string) : Observable<NumerosDomain> {
+    const url = `${this.urlAPI}numeros/?contatos=${contatos_join}`
+    return this.http.post<NumerosDomain>(url, numeros)
+  }
 }
