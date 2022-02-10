@@ -10,12 +10,17 @@ import { NumerosService } from '../service/numeros-service';
 })
 export class ContatosNumerosComponent implements OnInit {
 
+  numero: NumerosDomain = {
+    id: undefined!,
+    numero: ''
+  }
+
   numeros: NumerosDomain[] = []
   displayedColumns: string[] =  ['numero', 'acoes'];
 
   contatos_join: string = '';
 
-  constructor(private service : NumerosService, private route : ActivatedRoute) { }
+  constructor(private service : NumerosService, private route : ActivatedRoute, private router : Router) { }
 
   ngOnInit(): void {
     this.contatos_join = this.route.snapshot.paramMap.get('contatos_join')!
@@ -25,6 +30,13 @@ export class ContatosNumerosComponent implements OnInit {
   findAllByContatos() {
     this.service.findAllByContatos(this.contatos_join).subscribe( (resposta) => {
       this.numeros = resposta
+    })
+  }
+
+  create() {
+    this.service.create(this.numero, this.contatos_join).subscribe( (resposta) => {
+      this.router.navigate([`contatos/${this.contatos_join}/numeros`])
+      window.location.reload();
     })
   }
 

@@ -22,4 +22,12 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     </table>
+    <form>
+        <mat-form-field class="form">
+            <mat-label>Número</mat-label>
+            <input [(ngModel)]="numero.numero" name="numero" matInput type="text"/>
+        </mat-form-field>
+        <br/>
+        <button mat-button color="primary" (click)="create()">Adicionar número</button>
+    </form>
 </div>
