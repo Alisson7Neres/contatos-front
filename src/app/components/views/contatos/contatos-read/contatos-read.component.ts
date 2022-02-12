@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ContatosDomain } from '../domain/contatos-domain';
 import { ContatosService } from '../service/contatos-service';
 
@@ -12,8 +13,7 @@ export class ContatosReadComponent implements OnInit {
     contatos: ContatosDomain[] = []
 
     displayedColumns: string[]  = ['nome', 'sobrenome', 'email',  'numeros', 'acoes'];
-
-  constructor(private service : ContatosService) { }
+  constructor(private service : ContatosService, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
     this.findAll();

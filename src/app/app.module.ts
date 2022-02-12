@@ -23,6 +23,7 @@ import { ContatosNumerosComponent } from './components/views/contatos/contatos-n
 import { HomeComponent } from './components/views/contatos/home/home.component';
 import { ContatosCreateComponent } from './components/views/contatos/contatos-create/contatos-create.component';
 import { ContatosUpdateComponent } from './components/views/contatos/contatos-update/contatos-update.component';
+import { ContatosDeleteComponent } from './components/views/contatos/contatos-delete/contatos-delete.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ContatosUpdateComponent } from './components/views/contatos/contatos-up
     HomeComponent,
     ContatosCreateComponent,
     ContatosUpdateComponent,
+    ContatosDeleteComponent,
   ],
   imports: [
     BrowserModule,

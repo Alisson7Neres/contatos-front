@@ -32,4 +32,9 @@ export class ContatosService {
     const url = `${this.urlAPI}contatos/${contatos.id}`
     return this.http.put(url, contatos);
   }
+
+  delete(id : String) : Observable<void> {
+    const url = `${this.urlAPI}contatos/${id}`
+    return this.http.delete<void>(url);
+  }
 }

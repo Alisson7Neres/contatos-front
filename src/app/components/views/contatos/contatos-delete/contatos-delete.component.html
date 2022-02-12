@@ -1,0 +1,18 @@
+<form>
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+            <input [(ngModel)]="contatos.nome" matInput type="text" name="nome" placeholder="João"/>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="form">
+        <mat-label>Sobrenome</mat-label>
+            <input [(ngModel)]="contatos.sobrenome" matInput type="text" name="sobrenome" placeholder="Silva"/>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="form">
+        <mat-label>Email</mat-label>
+            <input [(ngModel)]="contatos.email" matInput type="text" name="email" placeholder="@hotmail.com"/>
+    </mat-form-field>
+
+    <button mat-button color="warn" (click)="delete()">Deletar</button>
+</form>
