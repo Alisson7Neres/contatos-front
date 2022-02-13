@@ -22,4 +22,14 @@ export class NumerosService {
     const url = `${this.urlAPI}numeros/?contatos=${contatos_join}`
     return this.http.post<NumerosDomain>(url, numeros)
   }
+
+  update(numeros : NumerosDomain) : Observable<NumerosDomain> {
+    const url = `${this.urlAPI}numeros/${numeros.id}`
+    return this.http.put<NumerosDomain>(url, numeros)
+  }
+
+  findAllNumeros(id : String) : Observable<NumerosDomain> {
+    const url = `${this.urlAPI}numeros/${id}`
+    return this.http.get<NumerosDomain>(url)
+  }
 }

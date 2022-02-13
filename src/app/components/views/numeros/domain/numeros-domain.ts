@@ -1,5 +1,5 @@
 export interface NumerosDomain {
 
-    id: Number,
+    id: String,
     numero: String
 }
