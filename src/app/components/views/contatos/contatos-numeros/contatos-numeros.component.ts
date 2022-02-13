@@ -39,5 +39,4 @@ export class ContatosNumerosComponent implements OnInit {
       window.location.reload();
     })
   }
-
 }

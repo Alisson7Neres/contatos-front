@@ -32,4 +32,9 @@ export class NumerosService {
     const url = `${this.urlAPI}numeros/${id}`
     return this.http.get<NumerosDomain>(url)
   }
+
+  delete(id : String) : Observable<void>{
+    const url = `${this.urlAPI}numeros/${id}`
+    return this.http.delete<void>(url)
+  }
 }
