@@ -16,7 +16,7 @@ export class ContatosDeleteComponent implements OnInit {
     nome: '',
     sobrenome: '',
     email: ''
-  }
+  };
 
   constructor(private service: ContatosService, private route: ActivatedRoute, private router : Router) { }
   
@@ -31,11 +31,15 @@ export class ContatosDeleteComponent implements OnInit {
       this.contatos.sobrenome = resposta.sobrenome
       this.contatos.email = resposta.email
     })
-  }
+  };
   
   delete() {
     this.service.delete(this.contatos.id).subscribe( () => {
       this.router.navigate(['/contatos'])
     })
+  };
+
+  cancel() {
+    this.router.navigate(['contatos/'])
   }
 }

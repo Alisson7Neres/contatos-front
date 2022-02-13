@@ -59,4 +59,8 @@ export class ContatosNumerosUpdateComponent implements OnInit {
       }, 3000)
     })
   }
+
+  cancel() {
+    this.router.navigate([`contatos/`])
+  }
 }

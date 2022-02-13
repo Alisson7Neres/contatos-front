@@ -15,20 +15,20 @@ export class ContatosUpdateComponent implements OnInit {
     nome: '',
     sobrenome: '',
     email: ''
-  }
+  };
 
   constructor(private service : ContatosService, private route : ActivatedRoute, private router : Router) { }
 
   ngOnInit(): void {
     this.contatos.id = this.route.snapshot.paramMap.get('id')!
     this.findById()
-  }
+  };
 
   update() {
     this.service.update(this.contatos).subscribe( (resposta) => {
       this.router.navigate(['contatos'])
     })
-  }
+  };
 
   findById(): void {
     this.service.findById(this.contatos.id!).subscribe( resposta => {
@@ -36,6 +36,10 @@ export class ContatosUpdateComponent implements OnInit {
       this.contatos.sobrenome = resposta.sobrenome
       this.contatos.email = resposta.email
     })
+  };
+
+  cancel() {
+    this.router.navigate(['contatos/'])
   }
 
 }

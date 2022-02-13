@@ -28,4 +28,8 @@ export class ContatosCreateComponent implements OnInit {
       this.router.navigate(['contatos'])
     })
   }
+
+  cancel() {
+    this.router.navigate(['contatos'])
+  }
 }

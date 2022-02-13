@@ -3,6 +3,10 @@
     margin: 1rem auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 @media(max-width: 450px) {
     .home {
         width: 70%;
